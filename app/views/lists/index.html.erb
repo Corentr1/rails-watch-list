@@ -6,11 +6,11 @@
 
 <div class="container">
 <h2>My lists</h2>
-  <% @lists.each do |list| %>
-    <div class="cards">
-      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://picsum.photos/seed/picsum/200/300)">
+  <div class="cards">
+    <% @lists.each do |list| %>
+      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://picsum.photos/200/300)">
         <p><%= link_to "#{list.name}", list_path(list), style: "text-decoration: none; color: white;" %></p>
       </div>
-    </div>
-  <% end %>
+    <% end %>
+  </div>
 </div>
